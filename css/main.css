@@ -35,10 +35,6 @@ body {
   border-radius: 10px;
 }
 
-/*.nav-li :hover {
-  cursor: pointer;
-}*/
-
 .nav-a.active {
   background-color: #3498DB;
   color: #fff;
