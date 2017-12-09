@@ -69,6 +69,7 @@ $(document).ready(function(){
   //Shows menu bottom
   function setMenuBottom() {
     hideSideMenu();
+    $('.window').addClass('window-menu-right');
     $('.menu-bottom').removeClass('hidden');
   };
 
