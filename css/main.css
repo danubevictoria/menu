@@ -5,8 +5,9 @@
 }
 
 body {
-  background-color: #DADFE1;
+  /*background-color: #DADFE1;*/
   z-index: 1;
+  background-image: url("../images/background.jpg");
 }
 
 /* NAVIGATION */
@@ -134,7 +135,8 @@ body {
   font-size: 28px;
   outline: none;
   border: none;
-  background-color: #DADFE1;
+  background-color: transparent;
+  color: #686868;
 }
 
 .title:focus {
