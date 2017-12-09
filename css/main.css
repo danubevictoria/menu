@@ -115,6 +115,42 @@ body {
    z-index: 1010;
 }
 
+/* MENU BOTTOM */
+.menu-bottom {
+  width: 100%;
+  height: 70px;
+  background-color: #686868;
+  text-decoration: none;
+  list-style: none;
+  position: fixed;
+  z-index: 3;
+  bottom: 0;
+}
+
+.menu-li-bottom {
+  display: inline-block;
+  /*width: 240px;*/
+}
+
+.menu-a-bottom {
+  /*width: 240px;*/
+  text-decoration: none;
+  color: #fff;
+  padding: 10px;
+  line-height: 70px;
+  margin: 0 10px 0 10px;
+  border-radius: 10px;
+}
+
+.menu-a-bottom.active {
+  background-color: #fff;
+  color: #686868;
+}
+
+.hidden {
+  visibility: hidden;
+}
+
 /* WINDOW */
 .window {
   width: 1000px;

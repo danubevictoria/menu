@@ -6,6 +6,16 @@ $(document).ready(function(){
 
   //Sets button in top nav to active
   $('.nav').on('click', '.nav-a', setNavActive);
+  //When top nav is clicked on, sets selected item to active
+  $('.menu').on('click', '.menu-li', setMenuActive);
+  //When Menu Right selected, sets menu to right
+  $('#menu-right').on('click', setMenuRight);
+  //When menu left selected, sets menu to left
+  $('#menu-left').on('click', setMenuLeft);
+  //When menu bottom selected, shows menu on bottom
+  $('#menu-bottom').on('click', setMenuBottom);
+  //When menu item in menu bottom is selected, sets it to active
+  $('.menu-bottom').on('click', '.menu-a-bottom', setMenuBottomActive);
 
   // Sets the clicked on button in top nav to active
   function setNavActive() {
@@ -13,17 +23,11 @@ $(document).ready(function(){
     $(this).toggleClass('active');
   };
 
-  //Selects item from menu
-  $('.menu').on('click', '.menu-li', setMenuActive)
-
   //Sets selected menu item to active
   function setMenuActive() {
     $('.menu-li.active').toggleClass('active');
     $(this).toggleClass('active');
   };
-
-  //Sets menu to right
-  $('#menu-right').on('click', setMenuRight);
 
   //Removes any additional added changes to menu and sets menu to right
   function setMenuRight() {
@@ -31,9 +35,6 @@ $(document).ready(function(){
     $('.menu').addClass('menu-right');
     $('.window').addClass('window-menu-right');
   };
-
-  //On click, sets menu to left
-  $('#menu-left').on('click', setMenuLeft);
 
   //Removes any prior added changes to the menu due to resizing or nav selection
   function removeMenuChanges() {
@@ -49,11 +50,31 @@ $(document).ready(function(){
     $('.menu').removeClass('menu-left');
     $('.menu').removeClass('menu-right');
     $('.window').removeClass('window-menu-right');
+    $('.menu-bottom').addClass('hidden');
+    $('.menu').removeClass('hidden');
   };
 
   //Sets menu to left side
   function setMenuLeft() {
     removeMenuChanges();
     $('.menu').addClass('menu-left');
+  };
+
+  // MENU BOTTOM
+  //Hides side menu
+  function hideSideMenu() {
+    $('.menu').addClass('hidden');
+  };
+
+  //Shows menu bottom
+  function setMenuBottom() {
+    hideSideMenu();
+    $('.menu-bottom').removeClass('hidden');
+  };
+
+  //Enables selecting a menu item in menu bottom
+  function setMenuBottomActive() {
+    $('.menu-a-bottom.active').toggleClass('active');
+    $(this).toggleClass('active');
   };
 });
