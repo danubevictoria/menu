@@ -17,6 +17,7 @@ body {
   text-decoration: none;
   list-style: none;
   position: fixed;
+  z-index: 3;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
@@ -53,6 +54,7 @@ body {
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
+  z-index: 2;
 }
 
 .menu-list {
@@ -86,6 +88,10 @@ body {
 
 .menu-right {
   right: 0;
+}
+
+.menu-left {
+  left: 0;
 }
 
 .menu-list > li {
