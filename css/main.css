@@ -5,7 +5,7 @@
 }
 
 body {
-  /*background-color: #DADFE1;*/
+  background-color: #DADFE1;
   z-index: 1;
   background-image: url("../images/background.jpg");
 }
@@ -96,7 +96,7 @@ body {
 }
 
 .menu-list > li {
-  position:relative;
+  position: relative;
 }
 
 .menu-list > li[data-tooltip]:hover::after {
